@@ -15,7 +15,7 @@ let profileInfo = {
         return  document.querySelectorAll('.pv-top-card--list');
     },
     getProfileName: function (query) {
-        return query()[0].querySelector('li').innerText;
+        // return query()[0].querySelector('li').innerText;
     },
     getProfileConnectionHierarchy: function (query) {
         let connectionQuery = query()[0];
@@ -32,3 +32,5 @@ let profileInfo = {
         return designationQuery.innerText;
     }
 }
+
+// profileInfo.init();

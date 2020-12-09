@@ -1,0 +1,38 @@
+{
+    "name": "Linkedin Profile Fetcher",
+    "description": "fetch profile details of searched profiles",
+    "version": "1.0",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "tabs",
+        "<all_urls>",
+        "webNavigation",
+        "*://*/*"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*"
+            ],
+            "matches": [
+                "https://*/*"
+            ],
+            "js": [
+                "profileInfo.js",
+                "profileList.js",
+                "main.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}
